@@ -14,6 +14,8 @@
 		DF8B3344269AE2B700E1A865 /* GoogleClassroomClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3342269AE2B700E1A865 /* GoogleClassroomClone.xcdatamodeld */; };
 		DF8B3346269AE2B900E1A865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8B3345269AE2B900E1A865 /* Assets.xcassets */; };
 		DF8B3349269AE2B900E1A865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8B3347269AE2B900E1A865 /* LaunchScreen.storyboard */; };
+		DF8B3355269AEC3000E1A865 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3354269AEC3000E1A865 /* HomeViewController.swift */; };
+		DF8B3357269AF44500E1A865 /* SideBarMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3356269AF44500E1A865 /* SideBarMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		DF8B3345269AE2B900E1A865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF8B3348269AE2B900E1A865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF8B334A269AE2B900E1A865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF8B3354269AEC3000E1A865 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DF8B3356269AF44500E1A865 /* SideBarMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,50 @@
 		DF8B3338269AE2B700E1A865 /* GoogleClassroomClone */ = {
 			isa = PBXGroup;
 			children = (
-				DF8B3339269AE2B700E1A865 /* AppDelegate.swift */,
-				DF8B333B269AE2B700E1A865 /* SceneDelegate.swift */,
-				DF8B333D269AE2B700E1A865 /* ViewController.swift */,
-				DF8B333F269AE2B700E1A865 /* Main.storyboard */,
+				DF8B3353269AE31E00E1A865 /* Managers */,
+				DF8B3352269AE2D800E1A865 /* Controllers */,
+				DF8B3351269AE2D100E1A865 /* Views */,
+				DF8B3350269AE2C700E1A865 /* Models */,
 				DF8B3345269AE2B900E1A865 /* Assets.xcassets */,
-				DF8B3347269AE2B900E1A865 /* LaunchScreen.storyboard */,
 				DF8B334A269AE2B900E1A865 /* Info.plist */,
 				DF8B3342269AE2B700E1A865 /* GoogleClassroomClone.xcdatamodeld */,
 			);
 			path = GoogleClassroomClone;
+			sourceTree = "<group>";
+		};
+		DF8B3350269AE2C700E1A865 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DF8B3351269AE2D100E1A865 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF8B3347269AE2B900E1A865 /* LaunchScreen.storyboard */,
+				DF8B333F269AE2B700E1A865 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DF8B3352269AE2D800E1A865 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DF8B333D269AE2B700E1A865 /* ViewController.swift */,
+				DF8B3354269AEC3000E1A865 /* HomeViewController.swift */,
+				DF8B3356269AF44500E1A865 /* SideBarMenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DF8B3353269AE31E00E1A865 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DF8B3339269AE2B700E1A865 /* AppDelegate.swift */,
+				DF8B333B269AE2B700E1A865 /* SceneDelegate.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8B3357269AF44500E1A865 /* SideBarMenuViewController.swift in Sources */,
 				DF8B333E269AE2B700E1A865 /* ViewController.swift in Sources */,
 				DF8B333A269AE2B700E1A865 /* AppDelegate.swift in Sources */,
+				DF8B3355269AEC3000E1A865 /* HomeViewController.swift in Sources */,
 				DF8B3344269AE2B700E1A865 /* GoogleClassroomClone.xcdatamodeld in Sources */,
 				DF8B333C269AE2B700E1A865 /* SceneDelegate.swift in Sources */,
 			);
