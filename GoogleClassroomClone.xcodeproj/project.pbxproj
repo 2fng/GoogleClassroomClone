@@ -16,6 +16,10 @@
 		DF8B3349269AE2B900E1A865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8B3347269AE2B900E1A865 /* LaunchScreen.storyboard */; };
 		DF8B3355269AEC3000E1A865 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3354269AEC3000E1A865 /* HomeViewController.swift */; };
 		DF8B3357269AF44500E1A865 /* SideBarMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3356269AF44500E1A865 /* SideBarMenuViewController.swift */; };
+		DF8B335B269F00F500E1A865 /* Classroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B335A269F00F500E1A865 /* Classroom.swift */; };
+		DF8B335D269F050F00E1A865 /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B335C269F050F00E1A865 /* SectionItem.swift */; };
+		DF8B335F269F0BFC00E1A865 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B335E269F0BFC00E1A865 /* FirstTableViewCell.swift */; };
+		DF8B3361269F0FE100E1A865 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3360269F0FE100E1A865 /* SecondTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		DF8B334A269AE2B900E1A865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF8B3354269AEC3000E1A865 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DF8B3356269AF44500E1A865 /* SideBarMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarMenuViewController.swift; sourceTree = "<group>"; };
+		DF8B335A269F00F500E1A865 /* Classroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classroom.swift; sourceTree = "<group>"; };
+		DF8B335C269F050F00E1A865 /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
+		DF8B335E269F0BFC00E1A865 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
+		DF8B3360269F0FE100E1A865 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,8 @@
 		DF8B3350269AE2C700E1A865 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DF8B335A269F00F500E1A865 /* Classroom.swift */,
+				DF8B335C269F050F00E1A865 /* SectionItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -85,6 +95,8 @@
 			children = (
 				DF8B3347269AE2B900E1A865 /* LaunchScreen.storyboard */,
 				DF8B333F269AE2B700E1A865 /* Main.storyboard */,
+				DF8B335E269F0BFC00E1A865 /* FirstTableViewCell.swift */,
+				DF8B3360269F0FE100E1A865 /* SecondTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,11 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8B335F269F0BFC00E1A865 /* FirstTableViewCell.swift in Sources */,
+				DF8B3361269F0FE100E1A865 /* SecondTableViewCell.swift in Sources */,
 				DF8B3357269AF44500E1A865 /* SideBarMenuViewController.swift in Sources */,
 				DF8B333E269AE2B700E1A865 /* ViewController.swift in Sources */,
 				DF8B333A269AE2B700E1A865 /* AppDelegate.swift in Sources */,
 				DF8B3355269AEC3000E1A865 /* HomeViewController.swift in Sources */,
 				DF8B3344269AE2B700E1A865 /* GoogleClassroomClone.xcdatamodeld in Sources */,
+				DF8B335D269F050F00E1A865 /* SectionItem.swift in Sources */,
+				DF8B335B269F00F500E1A865 /* Classroom.swift in Sources */,
 				DF8B333C269AE2B700E1A865 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
