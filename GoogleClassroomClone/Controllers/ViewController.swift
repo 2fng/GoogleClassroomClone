@@ -38,16 +38,16 @@ class ViewController: UIViewController {
     
     private func addChildVC() {
         //SideBarMenu
+        sideBarViewVC.delegate = self
         addChild(sideBarViewVC)
         view.addSubview(sideBarViewVC.view)
         sideBarViewVC.didMove(toParent: self)
         
         //Home view controller
         homeViewVC.delegate = self
-        let navVC = UINavigationController(rootViewController: homeViewVC)
-        //addChild(navVC)
-        view.addSubview(navVC.view)
-        navVC.didMove(toParent: self)
+        addChild(homeViewVC)
+        view.addSubview(homeViewVC.view)
+        homeViewVC.didMove(toParent: self)
         
     }
 
@@ -56,9 +56,10 @@ class ViewController: UIViewController {
 
 extension ViewController: HomeViewControllerDelegate {
     @objc func didTapSideButton() {
-        //Animate the menu
-        //print("did tap")
-        
+        toggleMenu(completion: nil)
+    }
+    
+    func toggleMenu(completion: (() -> Void)?) {
         switch sideBarState {
         
         case .closed:
@@ -70,6 +71,9 @@ extension ViewController: HomeViewControllerDelegate {
             }, completion: { [weak self] done in
                 if done {
                     self?.sideBarState = .opened
+                    DispatchQueue.main.async {
+                        completion?()
+                    }
                 }
             })
         case .opened:
@@ -85,6 +89,35 @@ extension ViewController: HomeViewControllerDelegate {
             })
         break
         }
+    }
+}
+
+extension ViewController: SideBarViewControllerDelegate {
+    
+    func didTapItem() {
+        print("Did tap Item")
+        
+//        toggleMenu { [weak self] in
+//            switch menuItem {
+//
+//            case .lopHoc:
+//                break
+//            case .lich:
+//                break
+//            case .viecCanLam:
+//                break
+//            case .lopHocDaLuuTru:
+//                break
+//            case .thuMucLopHoc:
+//                break
+//            case .caiDat:
+//                break
+//            case .guiPhanHoiChoGoogle:
+//                break
+//            case .troGiup:
+//                break
+//            }
+//        }
     }
 }
 

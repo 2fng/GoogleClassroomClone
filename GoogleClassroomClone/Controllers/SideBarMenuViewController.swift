@@ -7,21 +7,26 @@
 
 import UIKit
 
+protocol SideBarViewControllerDelegate: AnyObject {
+    func didTapItem()
+}
+
 class SideBarMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    weak var delegate: SideBarViewControllerDelegate?
     
     var classrooms: [Classroom] = [
         
     Classroom(classroomName: "D13HTTMDT2", teacherName: "Nguyen Thi Ngoc Tu", subject: "Nguyen ly he dieu hanh"),
     Classroom(classroomName: "D13HTTMDT2", teacherName: "Nguyen Thi Thanh Tan", subject: "Nhap mon tin hoc"),
     Classroom(classroomName: "D13HTTMDT2", teacherName: "Ngo Hoang Huy", subject: "Nhap mon hoc may"),
-    Classroom(classroomName: "D13HTTMDT2", teacherName: "Nguyen Thi Be", subject: "Tieng Anh 2")
-        
+    Classroom(classroomName: "D13HTTMDT2", teacherName: "Nguyen Thi Be", subject: "Tieng Anh 2"),
+    Classroom(classroomName: "D13HTTMDT2", teacherName: "Tran Van Dinh", subject: "Khai Pha Du Lieu"),
+    Classroom(classroomName: "D13HTTMDT2", teacherName: "Can Duc Diep", subject: "Quan Tri Du An CNTT"),
+    Classroom(classroomName: "D13HTTMDT2", teacherName: "Nguyen Thi Thanh Tan", subject: "Tri tue nhan tao"),
+    Classroom(classroomName: "D13HTTMDT2", teacherName: "Ngo Hoang Huy", subject: "Cau truc du lieu va giai thuat"),
+    Classroom(classroomName: "D13HTTMDT2", teacherName: "Ngo Hoang Huy", subject: "Cau truc du lieu va giai thuat nang cao")
     ]
-    
-    var section2 = [SectionItem(name: "Việc cần làm", image: "list.bullet.rectangle"), Classroom(classroomName: "D13HTTMDT2", teacherName: "Nguyen Thi Ngoc Tu", subject: "Nguyen ly he dieu hanh"),
-                    Classroom(classroomName: "D13HTTMDT2", teacherName: "Nguyen Thi Thanh Tan", subject: "Nhap mon tin hoc"),
-                    Classroom(classroomName: "D13HTTMDT2", teacherName: "Ngo Hoang Huy", subject: "Nhap mon hoc may"),
-                    Classroom(classroomName: "D13HTTMDT2", teacherName: "Nguyen Thi Be", subject: "Tieng Anh 2")] as [Any]
     
     enum MenuOptions: String, CaseIterable {
         case lopHoc = "Lớp học"
@@ -70,18 +75,20 @@ class SideBarMenuViewController: UIViewController, UITableViewDelegate, UITableV
 
         // Do any additional setup after loading the view.
         
-        view.backgroundColor = .systemPink
         view.addSubview(tableView)
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        
+        tableView.isUserInteractionEnabled = true
         
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.bounds.size.width, height: view.bounds.size.height)
+        var tableHeight = view.bounds.size.height - view.safeAreaInsets.bottom
+        tableHeight -= view.safeAreaInsets.top
+        tableView.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.bounds.size.width, height: tableHeight)
     }
     
     // Table
@@ -137,5 +144,9 @@ class SideBarMenuViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        //let item = MenuOptions.allCases[indexPath.row]
+        //let classroomItem = classrooms[indexPath.row]
+        delegate?.didTapItem()
+        
     }
 }
