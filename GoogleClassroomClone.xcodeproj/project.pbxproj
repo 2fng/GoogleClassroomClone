@@ -20,6 +20,9 @@
 		DF8B335D269F050F00E1A865 /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B335C269F050F00E1A865 /* SectionItem.swift */; };
 		DF8B335F269F0BFC00E1A865 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B335E269F0BFC00E1A865 /* FirstTableViewCell.swift */; };
 		DF8B3361269F0FE100E1A865 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B3360269F0FE100E1A865 /* SecondTableViewCell.swift */; };
+		DF8B336626A0154000E1A865 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B336526A0154000E1A865 /* UIColorExtension.swift */; };
+		DF8B336A26A024DC00E1A865 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B336826A024DC00E1A865 /* HomeTableViewCell.swift */; };
+		DF8B336B26A024DC00E1A865 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8B336926A024DC00E1A865 /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		DF8B335C269F050F00E1A865 /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
 		DF8B335E269F0BFC00E1A865 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		DF8B3360269F0FE100E1A865 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		DF8B336526A0154000E1A865 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		DF8B336826A024DC00E1A865 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DF8B336926A024DC00E1A865 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 		DF8B3338269AE2B700E1A865 /* GoogleClassroomClone */ = {
 			isa = PBXGroup;
 			children = (
+				DF8B336426A0152B00E1A865 /* Extensions */,
 				DF8B3353269AE31E00E1A865 /* Managers */,
 				DF8B3352269AE2D800E1A865 /* Controllers */,
 				DF8B3351269AE2D100E1A865 /* Views */,
@@ -97,6 +104,8 @@
 				DF8B333F269AE2B700E1A865 /* Main.storyboard */,
 				DF8B335E269F0BFC00E1A865 /* FirstTableViewCell.swift */,
 				DF8B3360269F0FE100E1A865 /* SecondTableViewCell.swift */,
+				DF8B336826A024DC00E1A865 /* HomeTableViewCell.swift */,
+				DF8B336926A024DC00E1A865 /* HomeTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +127,14 @@
 				DF8B333B269AE2B700E1A865 /* SceneDelegate.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		DF8B336426A0152B00E1A865 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF8B336526A0154000E1A865 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +196,7 @@
 			files = (
 				DF8B3349269AE2B900E1A865 /* LaunchScreen.storyboard in Resources */,
 				DF8B3346269AE2B900E1A865 /* Assets.xcassets in Resources */,
+				DF8B336B26A024DC00E1A865 /* HomeTableViewCell.xib in Resources */,
 				DF8B3341269AE2B700E1A865 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,8 +214,10 @@
 				DF8B333E269AE2B700E1A865 /* ViewController.swift in Sources */,
 				DF8B333A269AE2B700E1A865 /* AppDelegate.swift in Sources */,
 				DF8B3355269AEC3000E1A865 /* HomeViewController.swift in Sources */,
+				DF8B336A26A024DC00E1A865 /* HomeTableViewCell.swift in Sources */,
 				DF8B3344269AE2B700E1A865 /* GoogleClassroomClone.xcdatamodeld in Sources */,
 				DF8B335D269F050F00E1A865 /* SectionItem.swift in Sources */,
+				DF8B336626A0154000E1A865 /* UIColorExtension.swift in Sources */,
 				DF8B335B269F00F500E1A865 /* Classroom.swift in Sources */,
 				DF8B333C269AE2B700E1A865 /* SceneDelegate.swift in Sources */,
 			);

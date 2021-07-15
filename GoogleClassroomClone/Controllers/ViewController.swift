@@ -95,29 +95,8 @@ extension ViewController: HomeViewControllerDelegate {
 extension ViewController: SideBarViewControllerDelegate {
     
     func didTapItem() {
-        print("Did tap Item")
+        print("Did tap item")
         
-//        toggleMenu { [weak self] in
-//            switch menuItem {
-//
-//            case .lopHoc:
-//                break
-//            case .lich:
-//                break
-//            case .viecCanLam:
-//                break
-//            case .lopHocDaLuuTru:
-//                break
-//            case .thuMucLopHoc:
-//                break
-//            case .caiDat:
-//                break
-//            case .guiPhanHoiChoGoogle:
-//                break
-//            case .troGiup:
-//                break
-//            }
-//        }
     }
 }
 

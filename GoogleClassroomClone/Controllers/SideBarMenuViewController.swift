@@ -25,7 +25,7 @@ class SideBarMenuViewController: UIViewController, UITableViewDelegate, UITableV
     Classroom(classroomName: "D13HTTMDT2", teacherName: "Can Duc Diep", subject: "Quan Tri Du An CNTT"),
     Classroom(classroomName: "D13HTTMDT2", teacherName: "Nguyen Thi Thanh Tan", subject: "Tri tue nhan tao"),
     Classroom(classroomName: "D13HTTMDT2", teacherName: "Ngo Hoang Huy", subject: "Cau truc du lieu va giai thuat"),
-    Classroom(classroomName: "D13HTTMDT2", teacherName: "Ngo Hoang Huy", subject: "Cau truc du lieu va giai thuat nang cao")
+    Classroom(classroomName: "D13HTTMDT2", teacherName: "Ngo Hoang Huy", subject: "Cau truc du lieu va giai thuat 2")
     ]
     
     enum MenuOptions: String, CaseIterable {
@@ -123,6 +123,7 @@ class SideBarMenuViewController: UIViewController, UITableViewDelegate, UITableV
             }
             
             secondCell.textLabel?.numberOfLines = 0
+            secondCell.textLabel?.lineBreakMode = .byClipping
             secondCell.textLabel?.text = "\(classrooms[indexPath.row - 3].subject)\n\(classrooms[indexPath.row-3].classroomName)"
             secondCell.imageView?.image = UIImage(systemName: "gear")
             secondCell.imageView?.tintColor = .systemRed
